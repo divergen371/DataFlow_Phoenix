@@ -1,4 +1,4 @@
-defmodule Dataflow_PhoenixWeb.Plug.DoNothing do
+defmodule Dataflow_PhoenixWeb.Plugs.DoNothing do
   def init(opts \\ []) do
     opts
   end
