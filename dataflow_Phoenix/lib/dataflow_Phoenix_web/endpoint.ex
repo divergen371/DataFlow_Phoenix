@@ -45,5 +45,6 @@ defmodule Dataflow_PhoenixWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+  plug Dataflow_PhoenixWeb.Plugs.DoNothing
   plug Dataflow_PhoenixWeb.Router
 end
