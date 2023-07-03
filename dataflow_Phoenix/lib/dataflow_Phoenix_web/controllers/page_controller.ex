@@ -3,5 +3,6 @@ defmodule Dataflow_PhoenixWeb.PageController do
 
   def index(conn, _params) do
     render(conn, "index.html")
+    |> IO.inspect()
   end
 end
