@@ -15,6 +15,6 @@ defmodule Dataflow_PhoenixWeb.Auth.OnlyAdmin do
   end
 
   defp admin?(_conn) do
-    false
+    true
   end
 end

@@ -50,7 +50,8 @@ config :dataflow_Phoenix, Dataflow_PhoenixWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/dataflow_Phoenix_web/(live|views)/.*(ex)$",
-      ~r"lib/dataflow_Phoenix_web/templates/.*(eex)$"
+      ~r"lib/dataflow_Phoenix_web/templates/.*(eex)$",
+      ~r"priv/static_html/.*(js|css|png|jpeg|jpg|gif|svg|html)$"
     ]
   ]
 
