@@ -10,12 +10,16 @@ defmodule Dataflow_PhoenixWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :do_nothing_pipeline do
+    plug Dataflow_PhoenixWeb.Plugs.DoNothing
+  end
   pipeline :api do
     plug :accepts, ["json"]
   end
 
   scope "/", Dataflow_PhoenixWeb do
     pipe_through :browser
+    pipe_through :do_nothing_pipeline
 
     get "/", PageController, :index
   end
