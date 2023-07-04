@@ -10,6 +10,11 @@ defmodule Dataflow_PhoenixWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  scope "/static", Dataflow_PhoenixWeb do
+    pipe_through :browser
+    get "/*path", StaticHTMLController, :index
+  end
+
   pipeline :do_nothing_pipeline do
     plug Dataflow_PhoenixWeb.Plugs.DoNothing
   end
