@@ -10,6 +10,7 @@ defmodule Dataflow_PhoenixWeb.Auth.OnlyAdmin do
     else
       conn
       |> redirect(external: "https://www.phoenixframework.org/")
+      |> halt()
     end
   end
 
